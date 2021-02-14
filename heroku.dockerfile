@@ -25,6 +25,8 @@ RUN set -x \
     && pip install -r requirements.txt
 
 FROM python:3.9-alpine as backend-prep
+RUN apk --no-cache add curl
+
 ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
     PYTHONPATH=/opt/scaife-stack/src/ \
@@ -38,7 +40,9 @@ COPY --from=backend-build /opt/scaife-stack/ /opt/scaife-stack/
 COPY ./backend .
 
 ARG HEROKU_APP_NAME
-RUN python manage.py prepare_db
+
+RUN sh scripts/prepare-atlas-data.sh
+
 RUN python manage.py loaddata fixtures/sites.json
 # TODO: Ensure $HEROKU_APP_NAME is applied via
 # an entrypoint script

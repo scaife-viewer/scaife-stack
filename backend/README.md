@@ -13,9 +13,18 @@ Make sure you are using a virtual environment of some sort (e.g. `virtualenv` or
 pip install -r requirements-dev.txt
 ```
 
+Retrieve content from the explorehomer-atlas repository:
+```
+./scripts/fetch-explorehomer-data.sh
+```
+
+Stage the ATLAS data directory:
+```
+python manage.py stage_atlas_data
+```
+
 Populate the database:
 
-<!-- TODO: Demonstrate leveraging the `prepare_atlas_db` command -->
 ```
 ./manage.py prepare_db
 ./manage.py loaddata sites

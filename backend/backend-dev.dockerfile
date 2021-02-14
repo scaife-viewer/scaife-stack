@@ -32,4 +32,5 @@ RUN set -x \
         )" \
     && apk --no-cache add \
         $runDeps \
-        curl
+        curl \
+        bash

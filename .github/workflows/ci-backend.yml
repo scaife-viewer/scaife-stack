@@ -26,9 +26,9 @@ jobs:
         uses: actions/cache@v2
         if: startsWith(runner.os, 'Linux')
         with:
-          path: ~/.cache/python
-          key: ${{ runner.os }}-pip-${{ hashFiles('requirements*.txt') }}
-          restore-keys: ${{ runner.os }}-pip-
+          path: |
+            ${{ env.pythonLocation}}
+          key: v2-${{ runner.os }}-${{ hashFiles('**/requirements*.txt') }}
       - name: Install deps using Pip
         run: pip install -r requirements-dev.txt
         if: steps.python-cache.outputs.cache-hit != 'true'

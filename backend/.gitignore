@@ -9,3 +9,4 @@ Pipfile.lock
 .venv/
 .hypothesis/
 .coverage
+data/library

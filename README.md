@@ -45,6 +45,36 @@ docker-compose run atlas sh
 To connect to the running container for the `atlas` service:
 ```shell
 docker-compose exec atlas sh
+
+```
+
+## Loading data into ATLAS
+By design, the ATLAS data ingestion process is designed as an atomic process:
+
+- New texts or annotations are staged into the `SV_ATLAS_DATA_DIR` directory
+- ATLAS ingestion scripts are used to ingest the data into the ATLAS SQlite database
+
+If a new annotation was to be added into ATLAS, the entire SQLite database would be destroyed
+and all data re-ingested.  Please note that the Scaife Viewer dev team _does_ plan on supporting
+incremental updates in the future.
+
+Here are two approaches that can be used to manage ATLAS data for a project:
+
+**1) Commit data into the repostory**
+
+- The data sets for [explorehomer-atlas](https://github.com/scaife-viewer/explorehomer-atlas) are commited directly into Git
+- After checking out the repo, the `prepare_db` script is ran against the `data/` directory
+- The resulting SQLite database is _excluded_ from VCS
+
+**2) Manage data externally**
+
+- The data sets for `scaife-stack` use data tracked in [explorehomer-atlas](https://github.com/scaife-viewer/explorehomer-atlas)
+- The `fetch-explorehomer-data` script is used to retrieve data to a temporary directory
+- The `stage_atlas_data` management command is used to stage the data for ingestion
+
+The `prepare-atlas-data.sh` script can be used to load the explorehomer-atlas data into `scaife-stack`:
+```shell
+docker-compose exec atlas ./scripts/prepare-atlas-data.sh
 ```
 
 ## Deployment
