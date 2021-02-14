@@ -1,6 +1,5 @@
 import json
 import os
-import pdb
 import shutil
 from pathlib import Path
 
@@ -12,13 +11,6 @@ import yaml
 
 LIBRARY_DIR = os.path.join(settings.SV_ATLAS_DATA_DIR, "library")
 ANNOTATIONS_DIR = os.path.join(settings.SV_ATLAS_DATA_DIR, "annotations")
-
-def get_text_path(version_metadata):
-    try:
-        return version_metadata["path"]
-    except:
-        import pdb; pdb.set_trace();
-        return
 
 
 class Command(BaseCommand):
@@ -150,7 +142,6 @@ class Command(BaseCommand):
                     src = os.path.join(annotations_path, subdir)
                     dest = os.path.join(ANNOTATIONS_DIR, subdir)
                     shutil.copytree(src, dest)
-
 
     def rebuild_directory(self, path):
         self.stdout.write(f"Removing and recreating {path}")
