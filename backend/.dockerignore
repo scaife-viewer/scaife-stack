@@ -3,5 +3,3 @@
 
 .gitignore
 .dockerfile
-data
-data-tmp
