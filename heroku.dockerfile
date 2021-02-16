@@ -41,6 +41,8 @@ COPY ./backend .
 
 ARG HEROKU_APP_NAME
 
+ARG ATLAS_DATA_REPO
+ARG ATLAS_DATA_REPO_REF
 RUN sh scripts/prepare-atlas-data.sh
 
 RUN python manage.py loaddata fixtures/sites.json

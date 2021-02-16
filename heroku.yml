@@ -1,5 +1,8 @@
 build:
   docker:
     web: heroku.dockerfile
+  config:
+    ATLAS_DATA_REPO: "jacobwegner/dunsany"
+    ATLAS_DATA_REPO_REF: "atlas-metadata"
 run:
   web: gunicorn scaife_stack_atlas.wsgi
