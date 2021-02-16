@@ -4,8 +4,10 @@ set -e
 mkdir -p data-tmp
 cd data-tmp
 
-GH_REPO_NAME="${GH_REPO_NAME:-scaife-viewer/explorehomer-atlas}"
-GIT_REF="${GIT_REF:-feature/atlas-yml}"
+ATLAS_DATA_REPO="${ATLAS_DATA_REPO:-scaife-viewer/explorehomer-atlas}"
+ATLAS_DATA_REPO_REF="${ATLAS_DATA_REPO_REF:-feature/atlas-yml}"
 
-curl -L "https://github.com/${GH_REPO_NAME}/archive/${GIT_REF}.tar.gz"  | tar zxf -
-echo "Downloaded contents of ${GH_REPO_NAME} at ${GIT_REF}"
+TARBALL_URL="https://github.com/${ATLAS_DATA_REPO}/archive/${ATLAS_DATA_REPO_REF}.tar.gz"
+echo "Retrieving $TARBALL_URL"
+curl -L "${TARBALL_URL}" | tar zxf -
+echo "Downloaded and untarred contents of ${ATLAS_DATA_REPO} at ${ATLAS_DATA_REPO_REF}"
