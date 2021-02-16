@@ -2,7 +2,7 @@
 set -e
 
 echo "[Fetching ATLAS data]"
-sh ./scripts/fetch-explorehomer-data.sh
+sh ./scripts/fetch-repo-tarball.sh
 
 echo "[Stage data]"
 python manage.py stage_atlas_data --rebuild

@@ -15,7 +15,7 @@ pip install -r requirements-dev.txt
 
 Retrieve content from the explorehomer-atlas repository:
 ```
-./scripts/fetch-explorehomer-data.sh
+./scripts/fetch-repo-tarball.sh
 ```
 
 Stage the ATLAS data directory:

@@ -69,7 +69,7 @@ Here are two approaches that can be used to manage ATLAS data for a project:
 **2) Manage data externally**
 
 - The data sets for `scaife-stack` use data tracked in [explorehomer-atlas](https://github.com/scaife-viewer/explorehomer-atlas)
-- The `fetch-explorehomer-data` script is used to retrieve data to a temporary directory
+- The `fetch-repo-tarball` script is used to retrieve data to a temporary directory
 - The `stage_atlas_data` management command is used to stage the data for ingestion
 
 The `prepare-atlas-data.sh` script can be used to load the explorehomer-atlas data into `scaife-stack`:

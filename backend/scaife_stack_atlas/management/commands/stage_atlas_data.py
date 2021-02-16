@@ -42,7 +42,7 @@ class Command(BaseCommand):
             return [x for x in p.iterdir() if x.is_dir()]
         except FileNotFoundError:
             self.stderr.write(
-                f"{tmp_path} was not found; run fetch-explorehomer-data to create it"
+                f"{tmp_path} was not found; run fetch-repo-tarball to create it"
             )
             return []
 
@@ -50,7 +50,7 @@ class Command(BaseCommand):
         atlas_conf_path = next(repo_dir.glob("atlas.yaml"), None)
         if not atlas_conf_path:
             self.stdout.write(
-                "{repo_dir.name} does not contain an ATLAS configuration file"
+                f"{repo_dir.name} does not contain an ATLAS configuration file"
             )
             return
 
