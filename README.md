@@ -66,6 +66,11 @@ Here are two approaches that can be used to manage ATLAS data for a project:
 - After checking out the repo, the `prepare_db` script is ran against the `data/` directory
 - The resulting SQLite database is _excluded_ from VCS
 
+For the `pedalion-data` branch, load data via
+```shell
+docker-compose exec atlas python manage.py prepare_db
+```
+
 **2) Manage data externally**
 
 - The data sets for `scaife-stack` use data tracked in [explorehomer-atlas](https://github.com/scaife-viewer/explorehomer-atlas)
