@@ -6,19 +6,31 @@ from django.conf import settings
 from lxml import etree
 
 from .constants import CRITO_VERSION_PART, PUNCTUATION_POSTAG, TREEBANK_PATH
-from .lookups import POSTAG_LOOKUP
+from .lookups import POSTAG_LOOKUP, UNMAPPED_TAGS
 
 
 # NOTE: Retrieve from POSTAG_LOOKUP
+def _bail(tag):
+    if tag in UNMAPPED_TAGS:
+        return True
+    return not tag
+
+
 def _pos(tag):
+    if _bail(tag):
+        return ""
     return POSTAG_LOOKUP[tag]["part_of_speech"]
 
 
 def _case(tag):
+    if _bail(tag):
+        return ""
     return POSTAG_LOOKUP[tag]["case"]
 
 
 def _mood(tag):
+    if _bail(tag):
+        return ""
     return POSTAG_LOOKUP[tag]["mood"]
 
 
@@ -67,8 +79,6 @@ def aldt_to_tokens(path):
         tokens = [t for t in tokens if t]
         tokens = [transform_token(ref, pos, t) for pos, t in enumerate(tokens)]
         all_tokens.extend(tokens)
-        # FIXME: remove the following line to annotate all tokens
-        break
     return all_tokens
 
 
