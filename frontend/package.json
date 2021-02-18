@@ -19,9 +19,9 @@
     "@scaife-viewer/reader-interlinear-mode": "^0.0.11",
     "@scaife-viewer/reader-metrical-mode": "^0.0.11",
     "@scaife-viewer/reader-named-entities-mode": "^0.0.11",
-    "@scaife-viewer/reader-syntax-trees-mode": "^0.0.7",
+    "@scaife-viewer/reader-syntax-trees-mode": "https://gitpkg.now.sh/scaife-viewer/frontend/packages/reader-syntax-trees-mode?9e115bdabd0082191e4ebe8823041fa940aedf1f",
     "@scaife-viewer/skeleton": "^0.0.12",
-    "@scaife-viewer/store": "^0.0.10",
+    "@scaife-viewer/store": "https://gitpkg.now.sh/scaife-viewer/frontend/packages/store?9e115bdabd0082191e4ebe8823041fa940aedf1f",
     "@scaife-viewer/widget-audio": "^0.0.11",
     "@scaife-viewer/widget-display-mode": "^0.0.11",
     "@scaife-viewer/widget-library": "^0.0.10",
@@ -84,5 +84,9 @@
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ]
+  ],
+  "resolutions": {
+    "@scaife-viewer/reader-syntax-trees-mode/@scaife-viewer/store": "https://gitpkg.now.sh/scaife-viewer/frontend/packages/store?9e115bdabd0082191e4ebe8823041fa940aedf1f",
+    "@scaife-viewer/reader-syntax-trees-mode/@scaife-viewer/vue-treant": "https://gitpkg.now.sh/scaife-viewer/frontend/packages/vue-treant?9e115bdabd0082191e4ebe8823041fa940aedf1f"
+  }
 }

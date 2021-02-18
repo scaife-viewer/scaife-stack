@@ -1387,6 +1387,16 @@
     "@fortawesome/vue-fontawesome" "^0.1.8"
     lodash.debounce "^4.0.8"
 
+"@scaife-viewer/common@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@scaife-viewer/common/-/common-0.2.0.tgz#e169c311eeb5fcec9f3d54784b6f0e5cf2d08178"
+  integrity sha512-iETnuViYYqynxx/9GchjwubcN+WK7Hsb6z/G6sPBwqnNtCqGPC1AXv3R7Q7gFuUxGM0GD241p7y45uYG9+/rzg==
+  dependencies:
+    "@fortawesome/fontawesome-svg-core" "^1.2.28"
+    "@fortawesome/free-solid-svg-icons" "^5.14.0"
+    "@fortawesome/vue-fontawesome" "^0.1.8"
+    lodash.debounce "^4.0.8"
+
 "@scaife-viewer/entity-map@^0.0.3":
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/@scaife-viewer/entity-map/-/entity-map-0.0.3.tgz#76284816e1d7bf82976e2df0d18f0f67d7ffc178"
@@ -1449,14 +1459,13 @@
     graphql-tag "^2.10.3"
     vue-apollo "^3.0.4"
 
-"@scaife-viewer/reader-syntax-trees-mode@^0.0.7":
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/@scaife-viewer/reader-syntax-trees-mode/-/reader-syntax-trees-mode-0.0.7.tgz#2a546212eba306b6db4e8405cd4674e6fc2272ec"
-  integrity sha512-kQg3N0VPZxY/32smsGBIgkQab90YVBv1CjgBz0dzQs05UHtNqNfbOt2oPrM/6C/3Wik5+PJb297CZ6nWPoziJA==
+"@scaife-viewer/reader-syntax-trees-mode@https://gitpkg.now.sh/scaife-viewer/frontend/packages/reader-syntax-trees-mode?9e115bdabd0082191e4ebe8823041fa940aedf1f":
+  version "0.2.0"
+  resolved "https://gitpkg.now.sh/scaife-viewer/frontend/packages/reader-syntax-trees-mode?9e115bdabd0082191e4ebe8823041fa940aedf1f#e41087c93691fd844e9e55327db0a2117dbe4991"
   dependencies:
     "@scaife-viewer/common" "^0.0.2"
     "@scaife-viewer/store" "^0.0.4"
-    "@scaife-viewer/vue-treant" "^0.0.4"
+    "@scaife-viewer/vue-treant" "^0.2.0"
     graphql-tag "^2.10.3"
     vue-apollo "^3.0.4"
 
@@ -1478,20 +1487,18 @@
     "@scaife-viewer/common" "^0.0.7"
     graphql-tag "^2.10.3"
 
-"@scaife-viewer/store@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@scaife-viewer/store/-/store-0.0.4.tgz#60a1d97ccf91c14c675987c104503e5d74bb220a"
-  integrity sha512-5qLiI+fOTPxiErS/JyoH+gQ2WLRgiOJV+536Csok/08t18IAq1MFXjFbXdoQpZhkhHbdXRbiayPTuQLLgtYIzA==
+"@scaife-viewer/store@^0.0.4", "@scaife-viewer/store@https://gitpkg.now.sh/scaife-viewer/frontend/packages/store?9e115bdabd0082191e4ebe8823041fa940aedf1f":
+  version "0.2.0"
+  resolved "https://gitpkg.now.sh/scaife-viewer/frontend/packages/store?9e115bdabd0082191e4ebe8823041fa940aedf1f#af4a6ed4505b9d8492dd7f249e7882a50fc4d12f"
   dependencies:
-    "@scaife-viewer/common" "^0.0.2"
+    "@scaife-viewer/common" "^0.2.0"
     graphql-tag "^2.10.3"
 
-"@scaife-viewer/vue-treant@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@scaife-viewer/vue-treant/-/vue-treant-0.0.4.tgz#994b2f1b958fe005617d17d0fa50a294ca9c2cad"
-  integrity sha512-WtoBcS2KauzWuob0r3EUStnUb53VJwX/52qM+DsYjAZNfLR6seKTi/dAeGCRgabk2yBEmuESkalHVkVl+sTKGA==
+"@scaife-viewer/vue-treant@^0.2.0", "@scaife-viewer/vue-treant@https://gitpkg.now.sh/scaife-viewer/frontend/packages/vue-treant?9e115bdabd0082191e4ebe8823041fa940aedf1f":
+  version "0.2.0"
+  resolved "https://gitpkg.now.sh/scaife-viewer/frontend/packages/vue-treant?9e115bdabd0082191e4ebe8823041fa940aedf1f#f35710caaaa2291375161cfc2562f71a84e5bc03"
   dependencies:
-    treantjs "^1.0.0"
+    raphael "^2.3.0"
 
 "@scaife-viewer/widget-audio@^0.0.11":
   version "0.0.11"
@@ -5353,6 +5360,11 @@ etag@~1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
   integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
+
+eve-raphael@0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/eve-raphael/-/eve-raphael-0.5.0.tgz#17c754b792beef3fa6684d79cf5a47c63c4cda30"
+  integrity sha1-F8dUt5K+7z+maE15z1pHxjxM2jA=
 
 event-pubsub@4.3.0:
   version "4.3.0"
@@ -10328,6 +10340,13 @@ range-parser@^1.2.1, range-parser@~1.2.1:
   resolved "https://registry.yarnpkg.com/range-parser/-/range-parser-1.2.1.tgz#3cf37023d199e1c24d1a55b84800c2f3e6468031"
   integrity sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==
 
+raphael@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/raphael/-/raphael-2.3.0.tgz#eabeb09dba861a1d4cee077eaafb8c53f3131f89"
+  integrity sha512-w2yIenZAQnp257XUWGni4bLMVxpUpcIl7qgxEgDIXtmSypYtlNxfXWpOBxs7LBTps5sDwhRnrToJrMUrivqNTQ==
+  dependencies:
+    eve-raphael "0.5.0"
+
 raw-body@2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/raw-body/-/raw-body-2.4.0.tgz#a1ce6fb9c9bc356ca52e89256ab59059e13d0332"
@@ -11975,11 +11994,6 @@ tr46@^2.0.2:
   integrity sha512-3n1qG+/5kg+jrbTzwAykB5yRYtQCTqOGKq5U5PE3b0a1/mzo6snDhjGS0zJVJunO0NrT3Dg1MLy5TjWP/UJppg==
   dependencies:
     punycode "^2.1.1"
-
-treantjs@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/treantjs/-/treantjs-1.0.0.tgz#dbc3f053e691cf700e671ff17c6e68c924a813aa"
-  integrity sha1-28PwU+aRz3AOZx/xfG5oySSoE6o=
 
 trim-newlines@^1.0.0:
   version "1.0.0"
