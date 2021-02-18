@@ -5,9 +5,7 @@ from django.conf import settings
 
 from lxml import etree
 
-
-CRITO_VERSION_PART = "tlg0059.tlg003.pedalion-tb"
-TREEBANK_PATH = "/Users/jwegner/Data/development/repos/perseids-publications/pedalion-trees/public/xml/crit.xml"
+from .constants import CRITO_VERSION_PART, TREEBANK_PATH
 
 
 def transform_headwords(words):

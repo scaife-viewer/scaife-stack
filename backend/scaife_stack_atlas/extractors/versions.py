@@ -4,10 +4,7 @@ from django.conf import settings
 
 from lxml import etree
 
-
-CRITO_VERSION_PART = "tlg0059.tlg003.pedalion-tb"
-TREEBANK_PATH = "/Users/jwegner/Data/development/repos/perseids-publications/pedalion-trees/public/xml/crit.xml"
-PUNCTUATION = "u--------"
+from .constants import CRITO_VERSION_PART, PUNCTUATION_POSTAG, TREEBANK_PATH
 
 
 def aldt_to_textparts(path):
@@ -19,7 +16,7 @@ def aldt_to_textparts(path):
         words = []
         prefix = None
         for pos, word in enumerate(sentence.xpath(".//word")):
-            if word.attrib["postag"] == PUNCTUATION:
+            if word.attrib["postag"] == PUNCTUATION_POSTAG:
                 if pos == 0:
                     prefix = f'{word.attrib["form"]}'
                 else:
